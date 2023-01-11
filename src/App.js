@@ -3,7 +3,9 @@ import './App.css';
 
 const App = () => {
   return (
-    <div>Oi mãe</div>
+    <section className='content-section'>
+      Oi mãe
+    </section>
   );
 };
 
