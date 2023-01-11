@@ -11,3 +11,18 @@
   align-items: center;
   justify-content: center;
 }
+
+.content-section ul {
+  list-style: none;
+}
+
+.content-section li {
+  background-color: #222c3b;
+  width: 10rem;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-family: Helvetica, sans-serif;
+  cursor: pointer;
+}

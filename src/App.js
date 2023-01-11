@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Reorder } from 'framer-motion';
 
 import './App.css';
 
 const App = () => {
 
-  const [items, setItems] = useState(["React", "CSS", "Motion"])
+  const [items, setItems] = useState(["React", "CSS", "Motion"]);
+
+  useEffect(() => {
+    console.log('Mudou')
+  }, [items])
 
   return (
     <section className='content-section'>
