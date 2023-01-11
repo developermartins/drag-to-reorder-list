@@ -7,14 +7,17 @@ const App = () => {
 
   const [items, setItems] = useState([
     { 
+      id: 1,
       nome: "React",
       imgLink: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
     },
     {
+      id: 2,
       nome: "CSS",
       imgLink: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
     },
     {
+      id: 3,
       nome: "HTML",
       imgLink: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
     }
@@ -38,7 +41,7 @@ const App = () => {
     <section className='content-section'>
       <Reorder.Group values={ items } onReorder={ setItems }>
         { items.map(item => (
-          <Reorder.Item key={ item.nome } value={ item }>
+          <Reorder.Item key={ item.id } value={ item }>
             { item.nome }
             <img src={item.imgLink} alt="item" />
           </Reorder.Item>
