@@ -7,21 +7,19 @@ const App = () => {
 
   const [items, setItems] = useState(["React", "CSS", "Motion"]);
 
-  // useEffect(() => {
-  //   const savedData = localStorage.getItem("items");
+  useEffect(() => {
+    const savedData = localStorage.getItem("items");
 
-  //   const getItems = () => {
-  //     if (savedData) {
-  //       setItems(JSON.parse(savedData));
-  //     } else {
-  //       localStorage.setItem("items", JSON.stringify(items));
-  //       setItems(items);
-  //     };
-  //   };
+    if (savedData) {
+      setItems(JSON.parse(savedData));
+    };
 
-  //   getItems();
+  }, []);
 
-  // }, []);
+  const saveItems = () => {
+    localStorage.setItem("items", JSON.stringify(items));
+    setItems(items);
+  };
 
   return (
     <section className='content-section'>
@@ -32,6 +30,12 @@ const App = () => {
           </Reorder.Item>
         )) }
       </Reorder.Group>
+      <button
+        className='save-btn'
+        onClick={ saveItems }
+      >
+        Salvar lista
+      </button>
     </section>
   );
 };
