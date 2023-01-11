@@ -18,6 +18,8 @@
 }
 
 .content-section li {
+  display: flex;
+  justify-content: space-between;
   background-color: #222c3b;
   width: 10rem;
   padding: 10px;
@@ -26,6 +28,10 @@
   font-size: 1.5rem;
   font-family: Helvetica, sans-serif;
   cursor: grab;
+}
+
+.content-section li img {
+  height: 25px;
 }
 
 .save-btn {
