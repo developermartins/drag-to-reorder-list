@@ -7,9 +7,21 @@ const App = () => {
 
   const [items, setItems] = useState(["React", "CSS", "Motion"]);
 
-  useEffect(() => {
-    console.log('Mudou')
-  }, [items])
+  // useEffect(() => {
+  //   const savedData = localStorage.getItem("items");
+
+  //   const getItems = () => {
+  //     if (savedData) {
+  //       setItems(JSON.parse(savedData));
+  //     } else {
+  //       localStorage.setItem("items", JSON.stringify(items));
+  //       setItems(items);
+  //     };
+  //   };
+
+  //   getItems();
+
+  // }, []);
 
   return (
     <section className='content-section'>
