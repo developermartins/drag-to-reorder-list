@@ -24,17 +24,16 @@ const App = () => {
   ]);
 
   useEffect(() => {
-    const savedData = localStorage.getItem("items");
+    const savedList = localStorage.getItem("items");
 
-    if (savedData) {
-      setItems(JSON.parse(savedData));
+    if (savedList) {
+      setItems(JSON.parse(savedList));
     };
 
   }, []);
 
-  const saveItems = () => {
+  const saveList = () => {
     localStorage.setItem("items", JSON.stringify(items));
-    setItems(items);
   };
 
   return (
@@ -49,7 +48,7 @@ const App = () => {
       </Reorder.Group>
       <button
         className='save-btn'
-        onClick={ saveItems }
+        onClick={ saveList }
       >
         Salvar lista
       </button>
