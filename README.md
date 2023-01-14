@@ -32,4 +32,4 @@ Run npm install
 Run the project
 <pre>
     npm start
-</pre>
+</pre> 
